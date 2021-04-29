@@ -1,0 +1,19 @@
+<section class="container mt-5">
+  {{#if erro}}
+  <div class="alert alert-danger" role="alert">
+    {{erro}}
+  </div>
+  {{/if}}
+  <h3>Faça login agora:</h3>
+  <div class="card">
+    <div class="card-body">
+      <form action="/usuario/logar" method="POST">
+        <label for="email">Email: </label>
+        <input type="email" name="email" class="form-control" required>
+        <label for="senha">Senha: </label>
+        <input type="password" name="password" class="form-control" required>
+        <button type="submit" class="btn btn-success mt-4">Fazer Login</button>
+      </form>
+    </div>
+  </div>
+</section>

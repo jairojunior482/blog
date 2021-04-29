@@ -1,0 +1,23 @@
+<section class="container mt-5">
+  {{#if erro}}
+  <div class="alert alert-danger" role="alert">
+    {{erro}}
+  </div>
+  {{/if}}
+
+  {{#if message}}
+  <div class="alert alert-success" role="alert">
+    {{message}}
+  </div>
+  {{/if}}
+  <h3>Criar categoria</h3>
+  <div class="card">
+    <div class="card-body">
+      <form action="/admin/categoria/criar" method="POST">
+        <label for="email">Nome: </label>
+        <input type="text" name="name" class="form-control mt-1" required>
+        <button type="submit" class="btn btn-success mt-4">Criar</button>
+      </form>
+    </div>
+  </div>
+</section>
