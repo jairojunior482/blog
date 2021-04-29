@@ -4,17 +4,16 @@
     {{erro}}
   </div>
   {{/if}}
-  <h3>Crie sua conta hoje: </h3>
+  <h3>Faça login agora:</h3>
   <div class="card">
     <div class="card-body">
-      <form action="/usuario/registrar" method="POST">
-        <label for="nome">Nome: </label>
-        <input type="text" name="username" class="form-control" required>
+      <form action="/logar" method="POST">
         <label for="email">Email: </label>
-        <input type="email" name="email" class="form-control" required>
+        <input type="email" value="{{email}}" name="email" class="form-control" required>
         <label for="senha">Senha: </label>
         <input type="password" name="password" class="form-control" required>
-        <button type="submit" class="btn btn-success mt-4">Criar conta</button>
+        <button type="submit" class="btn btn-success mt-4">Fazer Login</button>
+        <button class="btn btn-danger mt-4"><a href="/">Voltar</a></button>
       </form>
     </div>
   </div>

@@ -24,9 +24,14 @@ class CategoryController {
   async edit(req, res) {
     const id = req.params.id;
 
-    const category = await Category.findOne({ _id: id });
-
-    return res.render("admin/category/edit", { category });
+    try {
+      const category = await Category.findOne({ _id: id });
+      return res.render("admin/category/edit", { category });
+    } catch {
+      return res.render("admin/category/edit", {
+        erro: "Essa categoria não existe"
+      });
+    }
   }
 
   async update(req, res) {

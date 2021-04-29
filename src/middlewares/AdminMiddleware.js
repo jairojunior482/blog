@@ -6,7 +6,7 @@ async function AuthMiddleware(req, res, next) {
   const token = req.cookies["@token"];
 
   if (!token) {
-    return res.render("user/login", { erro: "Token não encontrado" });
+    return res.redirect("/");
   }
 
   const jwt_secrete = process.env.JWT_SECRETE;

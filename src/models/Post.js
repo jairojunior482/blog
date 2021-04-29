@@ -4,7 +4,6 @@ const Schema = mongoose.Schema;
 const PostSchema = new Schema({
   title: String,
   content: String,
-  sub_content: String,
   author: {
     type: Schema.Types.ObjectId,
     ref: "User"
@@ -12,6 +11,16 @@ const PostSchema = new Schema({
   category: {
     type: Schema.Types.ObjectId,
     ref: "Category"
+  },
+  date: {
+    type: Number,
+  },
+  created_at: {
+    type: String, 
+  },
+  updated_at: {
+    type: String, 
+    default: null
   }
 });
 
